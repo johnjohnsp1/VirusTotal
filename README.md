@@ -10,9 +10,9 @@ This will take a text output from Microsoft's Autoruns tool, "parse it", then lo
 
 Running the tool:
 =================
-autorunsc.exe -f /accepteula * >> Autostart_All.txt
+		autorunsc.exe -f /accepteula * >> Autostart_All.txt
 
-autohash.py -h
+		autohash.py -h
 		usage: autohash.py [-h] [-f INFILE]
 
 		Take autoruns txt output and look the hashes up on VirusTotal.
@@ -48,9 +48,9 @@ This "parses" the output from md5deep, bounces up the hashes against a whitelist
 
 Running the tool:
 =================
-md5deep.exe -r -l -s "<path>" >> Hashes.txt
+		md5deep.exe -r -l -s "<path>" >> Hashes.txt
 
-md5_vtlookup -h
+		md5_vtlookup -h
 
 		usage: vt.py [-h] [-wl WHITELIST] [-bl BLACKLIST]
 
@@ -64,7 +64,7 @@ md5_vtlookup -h
 		                        Path to the dumped hashes.
 
 
-python/vt/vt.py -wl whitelist.txt -bl Hashes.txt
+		python/vt/vt.py -wl whitelist.txt -bl Hashes.txt
 
 Output Example:
 ================
