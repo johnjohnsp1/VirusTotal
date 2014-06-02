@@ -3,9 +3,9 @@ Virus Total Lookup Scripts
 
 This is just a small collection of VirusTotal lookup scripts i've written to help automate a few things.
 
-#####################
-# autoruns_vtlookup #
-#####################
+
+Autoruns Virus Total Lookup
+============================
 This will take a text output from Microsoft's Autoruns tool, "parse it", then look up the hashes on VT.
 
 autorunsc.exe -f /accepteula * >> Autostart_All.txt
@@ -33,11 +33,8 @@ autoruns_vtlookup.py -f Autostart_All.txt
 
 If the positives are >= 1 it will print the McAfee malware label and also print a link to the suspect file.
 
-
-################
-# md5_vtlookup #
-################
-===========================
+MD5deep Virus Total Lookup
+=============================
 This "parses" the output from md5deep, bounces up the hashes against a whitelist, then the remaining files that are not in the whitelist it will query virus total.
 
 md5deep.exe -r -l -s "<path>" >> Hashes.txt
