@@ -1,7 +1,9 @@
 Virus Total Lookup Scripts
 ===========================
 
-This is just a small collection of VirusTotal lookup scripts i've written to help automate a few things.
+This is just a small collection of VirusTotal lookup scripts i've written to help automate a couple things. My IR collection script collects autoruns output and I also run md5deep against a few areas often visited by malware (%appdata%, %temp%, system32, etc.) I always found myself right clicking on hashes in autoruns and looking them up on the internet. That's too time consuming so I wanted some form of automation. Likewise with the md5deep output. It takes too long to review without some form of automation.
+
+The code it pretty ghetto, but it seems to work on the output I have tested. Hit me up if you get any errors or if you have suggestions for making them better/more effecient. patrick[dot]olsen@sysforensics[dot]org, or twitter [at]patrickrolsen.
 
 
 Autoruns Virus Total Lookup
