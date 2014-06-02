@@ -8,8 +8,6 @@ This is just a small collection of VirusTotal lookup scripts i've written to hel
 #####################
 This will take a text output from Microsoft's Autoruns tool, "parse it", then look up the hashes on VT.
 
-Running the tool:
-=================
 autorunsc.exe -f /accepteula * >> Autostart_All.txt
 
 autohash.py -h
@@ -24,10 +22,6 @@ autohash.py -h
 
 autoruns_vtlookup.py -f Autostart_All.txt
 
-Output Example:
-================
-If the positives are >= 1 it will print the McAfee malware label and also print a link to the suspect file.
-
 		c:\program files (x86)\dell\upsmanagementsoftware\upsms.exe 
 		0a15e929756ab59eee6115996bf09313 1 / 53 McAfee:  None https://www.virustotal.com/file/9214919c458dd9472276330f1669249ec53c594c3af735dbfd297c062ff6d85e/analysis/1401228199/ 
 		
@@ -37,7 +31,7 @@ If the positives are >= 1 it will print the McAfee malware label and also print 
 		c:\windows\system32\unregmp2.exe 
 		51df02e674a47191aa58111cb157174d 0 / 52 
 
-
+If the positives are >= 1 it will print the McAfee malware label and also print a link to the suspect file.
 
 
 ################
@@ -46,8 +40,6 @@ If the positives are >= 1 it will print the McAfee malware label and also print 
 ===========================
 This "parses" the output from md5deep, bounces up the hashes against a whitelist, then the remaining files that are not in the whitelist it will query virus total.
 
-Running the tool:
-=================
 md5deep.exe -r -l -s "<path>" >> Hashes.txt
 
 md5_vtlookup -h
@@ -66,8 +58,6 @@ md5_vtlookup -h
 
 md5_vtlookup.py -wl whitelist.txt -bl Hashes.txt
 
-Output Example:
-================
 		2e83ec18c281102c5dbb423f6df57cf3 C:\Windows\bootstat.dat has not been scanned before.
 		b30afc59f449c93d7030cd85d28a8c45 C:\Windows\certenroll.log has not been scanned before.
 		bd3d4eabd379a59f336b099a48d382f0 C:\Windows\CertReq.log has not been scanned before.
