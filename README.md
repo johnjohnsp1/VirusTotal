@@ -8,9 +8,7 @@ Autoruns Virus Total Lookup
 ============================
 This will take a text output from Microsoft's Autoruns tool, "parse it", then look up the hashes on VT.
 
-autorunsc.exe -f /accepteula * >> Autostart_All.txt
-
-autohash.py -h
+		autohash.py -h
 		usage: autohash.py [-h] [-f INFILE]
 
 		Take autoruns txt output and look the hashes up on VirusTotal.
@@ -19,6 +17,10 @@ autohash.py -h
 		  -h, --help            show this help message and exit
 		  -f INFILE, --infile INFILE
 		                        Path to autoruns text file.
+
+You will need to run autorunsc.exe first and get some output.
+
+autorunsc.exe -f /accepteula * >> Autostart_All.txt
 
 autoruns_vtlookup.py -f Autostart_All.txt
 
@@ -37,9 +39,7 @@ MD5deep Virus Total Lookup
 =============================
 This "parses" the output from md5deep, bounces up the hashes against a whitelist, then the remaining files that are not in the whitelist it will query virus total.
 
-md5deep.exe -r -l -s "<path>" >> Hashes.txt
-
-md5_vtlookup -h
+		md5_vtlookup -h
 		
 		usage: vt.py [-h] [-wl WHITELIST] [-bl BLACKLIST]
 
@@ -52,6 +52,9 @@ md5_vtlookup -h
 		  -bl BLACKLIST, --blacklist BLACKLIST
 		                        Path to the dumped hashes.
 
+First run md5deep and output it to a file.
+
+md5deep.exe -r -l -s "<path>" >> Hashes.txt
 
 md5_vtlookup.py -wl whitelist.txt -bl Hashes.txt
 
